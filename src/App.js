@@ -59,6 +59,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
     <Menu
       mode={screens.md ? "horizontal" : "vertical"}
       theme="dark"
+      className="custom-menu"
       selectedKeys={[getMenuKey(currentPath)]}
       style={{
         backgroundColor: screens.md ? "#1f1f1f" : "#1f1f1f",
