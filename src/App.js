@@ -93,19 +93,33 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
 
         {/* Mobile Drawer */}
         <Drawer
-          title="Meny"
-          placement="right"
-          onClose={() => setMobileMenuOpen(false)}
-          open={mobileMenuOpen}
-          bodyStyle={{ backgroundColor: "#1f1f1f" }}
-        >
-          <Menu theme="dark" mode="vertical" selectedKeys={[getMenuKey(currentPath)]}>
-            <Menu.Item key="2" icon={<FaScroll />}><Link to="/Meny" onClick={() => setMobileMenuOpen(false)}>Meny</Link></Menu.Item>
-            <Menu.Item key="3" icon={<FaCalendarAlt />} onClick={() => { setIsModalVisible(true); setMobileMenuOpen(false); }}>Boka bord</Menu.Item>
-            <Menu.Item key="4" icon={<FaMapMarked />}><Link to="/Hitta" onClick={() => setMobileMenuOpen(false)}>Hitta hit</Link></Menu.Item>
-            <Menu.Item key="5" icon={<FaInfoCircle />}><Link to="/OmOss" onClick={() => setMobileMenuOpen(false)}>Om oss</Link></Menu.Item>
-          </Menu>
-        </Drawer>
+  title="Meny"
+  placement="right"
+  onClose={() => setMobileMenuOpen(false)}
+  open={mobileMenuOpen}
+  bodyStyle={{ backgroundColor: "#1f1f1f", padding: 0 }} // set drawer background
+  headerStyle={{ backgroundColor: "#1f1f1f", color: "#fff" }} // header background
+>
+  <Menu
+    theme="dark"
+    mode="vertical"
+    selectedKeys={[getMenuKey(currentPath)]}
+    style={{ backgroundColor: "#1f1f1f", color: "#fff" }} // this line fixes the blue
+  >
+    <Menu.Item key="2" icon={<FaScroll />}>
+      <Link to="/Meny" onClick={() => setMobileMenuOpen(false)}>Meny</Link>
+    </Menu.Item>
+    <Menu.Item key="3" icon={<FaCalendarAlt />} onClick={() => { setIsModalVisible(true); setMobileMenuOpen(false); }}>
+      Boka bord
+    </Menu.Item>
+    <Menu.Item key="4" icon={<FaMapMarked />}>
+      <Link to="/Hitta" onClick={() => setMobileMenuOpen(false)}>Hitta hit</Link>
+    </Menu.Item>
+    <Menu.Item key="5" icon={<FaInfoCircle />}>
+      <Link to="/OmOss" onClick={() => setMobileMenuOpen(false)}>Om oss</Link>
+    </Menu.Item>
+  </Menu>
+</Drawer>
 
         <BokaBordModal visible={isModalVisible} onClose={() => setIsModalVisible(false)} />
       </Header>
