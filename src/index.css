@@ -96,3 +96,16 @@ code {
   font-size: 16px;
   padding: 0 20px;
 }
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  .mobile-menu-button {
+    display: inline-block;
+  }
+}
