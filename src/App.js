@@ -193,7 +193,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible }) {
 
 export default function App() {
   const [isModalVisible, setIsModalVisible] = React.useState(false);
-
+  const basename = process.env.NODE_ENV === "production" ? "/lillakopenhamn" : "/";
   return (
     <Router>
       <LayoutWrapper
