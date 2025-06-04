@@ -1,0 +1,205 @@
+import React from "react";
+import {
+  Layout,
+  Menu,
+  Typography,
+} from "antd";
+import {
+  FaScroll,
+  FaCalendarAlt,
+  FaMapMarked,
+  FaInfoCircle,
+} from "react-icons/fa";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
+
+import BokaBordModal from "./components/BokaBord";
+import StartSida from "./components/StartSida";
+import Meny from "./components/Meny";
+import HittaHit from "./components/HittaHit";
+import OmOss from "./components/OmOss";
+import Personuppgifter from "./components/Personuppgifter.js";
+
+const { Header, Content, Footer } = Layout;
+
+function LayoutWrapper({ isModalVisible, setIsModalVisible }) {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const getMenuKey = (path) => {
+    if (path === "/") return ""; // Hem har ingen menyhighlight
+    if (path.startsWith("/Meny")) return "2";
+    if (path.startsWith("/Hitta")) return "4";
+    if (path.startsWith("/OmOss")) return "5";
+    return "";
+  };
+
+  return (
+    <Layout>
+      {/* Logotyp-banderoll högst upp */}
+      <div style={{
+        backgroundColor: "#1f1f1f", // eller annan bakgrund
+        padding: "5px 0",
+        textAlign: "center"
+      }}>
+        <Link to="/">
+          <img
+            src="logo2.png"  // <- byt till din lokala eller hostade logga
+            alt="Lilla Köpenhamn"
+            style={{ maxHeight: "100px" }}
+          />
+        </Link>
+      </div>
+
+      <Header
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+          width: "100%",
+          backgroundColor: "#1f1f1f",
+          display: "flex",
+          alignItems: "center",
+          padding: "0 24px",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            marginRight: 25,
+            display: "flex",
+            alignItems: "center",
+            height: "100%",
+          }}
+        >
+          <img
+            src="logo3.png"
+            alt="Lilla Köpenhamn logotyp"
+            style={{ height: "50px", objectFit: "contain" }}
+          />
+        </Link>
+
+        <Menu
+          className="custom-menu"
+          theme="dark"
+          mode="horizontal"
+          selectedKeys={[getMenuKey(currentPath)]}
+          style={{
+            backgroundColor: "#1f1f1f",
+            borderBottom: "none",
+            flex: 1,
+          }}
+        >
+          <Menu.Item key="2" icon={<FaScroll />}>
+            <Link to="/Meny">Meny</Link>
+          </Menu.Item>
+          <Menu.Item
+            key="3"
+            icon={<FaCalendarAlt />}
+            onClick={() => setIsModalVisible(true)}
+          >
+            Boka bord
+          </Menu.Item>
+          <Menu.Item key="4" icon={<FaMapMarked />}>
+            <Link to="/Hitta">Hitta hit</Link>
+          </Menu.Item>
+          <Menu.Item key="5" icon={<FaInfoCircle />}>
+            <Link to="/OmOss">Om oss</Link>
+          </Menu.Item>
+        </Menu>
+
+        <BokaBordModal
+          visible={isModalVisible}
+          onClose={() => setIsModalVisible(false)}
+        />
+      </Header>
+
+      <Content style={{ background: "#141414" }}>
+        <Routes>
+          <Route
+            path="/"
+            element={<StartSida onBokaClick={() => setIsModalVisible(true)} />}
+          />
+          <Route path="/Meny" element={<Meny />} />
+          <Route path="/Hitta" element={<HittaHit />} />
+          <Route path="/OmOss" element={<OmOss />} />
+          <Route path="/Personuppgifter" element={<Personuppgifter />} />
+        </Routes>
+      </Content>
+      
+
+<Footer style={{ background: "#1f1f1f", color: "#ccc", padding: "32px 40px" }}>
+  <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+    {/* Övre rad */}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        alignItems: "center",
+        gap: "16px",
+      }}
+    >
+      {/* Vänster: Sociala medier */}
+      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <a
+          href="https://www.facebook.com/lillakopenhamn"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#ccc", fontSize: "20px" }}
+        >
+          <FaFacebookF />
+        </a>
+        <a
+          href="https://www.instagram.com/lillakopenhamn"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#ccc", fontSize: "22px" }}
+        >
+          <FaInstagram />
+        </a>
+        <span style={{ color: "#ccc", marginLeft: 8 }}>
+          Följ oss i sociala medier för erbjudanden och andra nyheter.
+        </span>
+      </div>
+
+      {/* Höger: Länk */}
+      <div style={{ textAlign: "right" }}>
+        <a href="/Personuppgifter" style={{ color: "#ccc" }}>
+          Personuppgifter
+        </a>
+      </div>
+    </div>
+
+    {/* Undre rad */}
+    <div
+      style={{
+        textAlign: "center",
+        marginTop: "32px",
+        fontSize: "14px",
+        color: "#999",
+      }}
+    >
+      © 2025 Lilla Köpenhamn · Org. nr: 556789-1234
+    </div>
+  </div>
+</Footer>
+
+
+    </Layout>
+  );
+}
+
+export default function App() {
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+
+  return (
+    <Router>
+      <LayoutWrapper
+        isModalVisible={isModalVisible}
+        setIsModalVisible={setIsModalVisible}
+      />
+    </Router>
+  );
+}

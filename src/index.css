@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.custom-menu .ant-menu-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.custom-menu .ant-menu-item {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.custom-menu .ant-menu-item:hover {
+  background-color: #3a3a3a !important; /* ljusare grå hover */
+  color: #fff !important;
+  border-bottom: 2px solid white !important;
+}
+
+.custom-menu .ant-menu-item-selected {
+  background-color: #2e2e2e !important; /* INGEN blå highlight */
+  color: #fff !important;
+}
+
+/* Ta bort blå underline på aktiv menyval */
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after {
+  border-bottom: none !important;
+}
+
+/* Ta bort ink bar (blå linje som följer menyval) */
+.ant-menu-horizontal .ant-menu-item-selected::after {
+  border-bottom: none !important;
+  transition: none !important;
+}
+
+
+.custom-menu .ant-menu-item-selected::after {
+  border-bottom: 2px solid white !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.ant-menu-dark .ant-menu-item-active {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.boka-bord-knapp {
+  background-color: #716559;
+  border-color: #716559;
+  color: #fff;
+  font-size: 18px;
+  padding: 24px 24px;
+  font-weight: 500;
+}
+
+.boka-bord-knapp:hover,
+.boka-bord-knapp:focus {
+  background-color: #5f574d !important;
+  border-color: #5f574d !important;
+  color: #fff !important;
+}
+
+
+.skicka-bokning-knapp {
+  background-color: #716559;
+  border-color: #716559;
+  color: #fff;
+}
+
+.skicka-bokning-knapp:hover,
+.skicka-bokning-knapp:focus {
+  background-color: #5f574d !important;
+  border-color: #5f574d !important;
+  color: #fff !important;
+}
+
+
+.custom-menu .ant-menu-item {
+  font-size: 16px;
+  padding: 0 20px;
+}
