@@ -12,7 +12,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Link,
@@ -107,31 +107,15 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
 
 export default function App() {
   const [isModalVisible, setIsModalVisible] = React.useState(false);
-  const basename = process.env.NODE_ENV === "production" ? "/lillakopenhamn" : "/";
 
   return (
-    <Router basename={basename}>
+    <Router>
       <Routes>
-        <Route
-          path="/"
-          element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<StartSida onBokaClick={() => setIsModalVisible(true)} />} />}
-        />
-        <Route
-          path="/Meny"
-          element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Meny />} />}
-        />
-        <Route
-          path="/Hitta"
-          element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<HittaHit />} />}
-        />
-        <Route
-          path="/OmOss"
-          element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<OmOss />} />}
-        />
-        <Route
-          path="/Personuppgifter"
-          element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Personuppgifter />} />}
-        />
+        <Route path="/" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<StartSida onBokaClick={() => setIsModalVisible(true)} />} />} />
+        <Route path="/Meny" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Meny />} />} />
+        <Route path="/Hitta" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<HittaHit />} />} />
+        <Route path="/OmOss" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<OmOss />} />} />
+        <Route path="/Personuppgifter" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Personuppgifter />} />} />
       </Routes>
     </Router>
   );
