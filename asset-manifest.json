@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lillakopenhamn/static/css/main.40f29f77.css",
-    "main.js": "/lillakopenhamn/static/js/main.42f993ef.js",
+    "main.js": "/lillakopenhamn/static/js/main.b288e916.js",
     "static/js/453.9fcd7c2c.chunk.js": "/lillakopenhamn/static/js/453.9fcd7c2c.chunk.js",
     "index.html": "/lillakopenhamn/index.html",
     "main.40f29f77.css.map": "/lillakopenhamn/static/css/main.40f29f77.css.map",
-    "main.42f993ef.js.map": "/lillakopenhamn/static/js/main.42f993ef.js.map",
+    "main.b288e916.js.map": "/lillakopenhamn/static/js/main.b288e916.js.map",
     "453.9fcd7c2c.chunk.js.map": "/lillakopenhamn/static/js/453.9fcd7c2c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40f29f77.css",
-    "static/js/main.42f993ef.js"
+    "static/js/main.b288e916.js"
   ]
 }
