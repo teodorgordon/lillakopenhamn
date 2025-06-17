@@ -18,8 +18,8 @@ export default function OmOss() {
         <Row gutter={[24, 24]} style={{ marginTop: 32 }}>
           <Col xs={24} md={12}>
             <Image
-              src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
-              alt="Restaurangmiljö"
+              src={`${process.env.PUBLIC_URL}/torskrygg.jpg`}
+              alt="Torkrygg"
               width="100%"
               preview={false}
               style={{ borderRadius: "8px" }}
@@ -29,7 +29,7 @@ export default function OmOss() {
             <Card style={{ backgroundColor: "#cbc2b8", color: "black" }} bordered={false}>
               <Title level={4} style={{ color: "black" }}>Vår filosofi</Title>
               <Paragraph style={{ color: "#000" }}>
-                Maten ska vara ärlig, vacker och inspirerande. Vi tror på kvalitet före kvantitet, nära relationer till våra leverantörer och ett varmt välkomnande till varje gäst.
+                Maten ska vara ärlig, vacker och inspirerande. Vi tror på kvalitet före kvantitet, nära relationer till våra leverantörer och ett varmt välkomnande till varje gäst. Här ska du känna dig som hemma, en plats du vill återkomma till och där du bemöts med kärlek. 
               </Paragraph>
             </Card>
           </Col>

@@ -91,7 +91,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   return (
     <Layout>
       {/* Stor logga */}
-      <div style={{ backgroundColor: "#FFFFFF", padding: "5px 0", textAlign: "center" }}>
+      <div style={{ backgroundColor: "#FFFFFF", padding: "50px", textAlign: "center" }}>
         <Link to="/">
           <img src={`${process.env.PUBLIC_URL}/logo2.png`} alt="Lilla Köpenhamn" style={{ maxHeight: "100px" }} />
         </Link>
@@ -133,7 +133,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
             <AntButton
               icon={<FaBars />}
               type="text"
-              style={{ marginLeft: "auto", color: "white" }}
+              style={{ marginLeft: "auto", color: "black" }}
               onClick={() => setIsDrawerOpen(true)}
             />
             <Drawer
@@ -141,8 +141,8 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
               placement="right"
               onClose={() => setIsDrawerOpen(false)}
               open={isDrawerOpen}
-              bodyStyle={{ padding: 0, background: "#1f1f1f" }}
-              headerStyle={{ background: "#1f1f1f", color: "#fff" }}
+              bodyStyle={{ padding: 0, background: "#fff" }}
+              headerStyle={{ background: "#fff", color: "#fff" }}
             >
               {MenuItems}
             </Drawer>
