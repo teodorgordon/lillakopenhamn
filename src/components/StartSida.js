@@ -1,15 +1,17 @@
 import React from "react";
 import { Typography, Button, Row, Col, Card, Image } from "antd";
 
+
+
 const { Title, Paragraph } = Typography;
 
 export default function StartSida({ onBokaClick }) {
   return (
-    <div style={{ background: "#141414" }}>
+    <div style={{ background: "#ffffff" }}>
       {/* Banner */}
       <div
         style={{
-          backgroundImage: "url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+          backgroundImage: `url(${process.env.PUBLIC_URL}/banner.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "600px",
@@ -44,17 +46,17 @@ export default function StartSida({ onBokaClick }) {
         <Row gutter={[24, 24]} style={{ marginBottom: "24px" }}>
           <Col xs={24} md={12}>
             <Image
-              src="https://media.istockphoto.com/id/2019308975/sv/foto/table-setting.jpg?s=612x612&w=0&k=20&c=A-HiUzCKuAkRhFKpWiYdmhM9OJ_BvixKj2SEG1WVGxo="
+              src={`${process.env.PUBLIC_URL}/lillakopenhamn.jpg`}
               alt="Bordsdukning"
               width="100%"
               preview={false}
             />
           </Col>
           <Col xs={24} md={12}>
-            <Card style={{ backgroundColor: "#716559", color: "white" }} bordered={false}>
-              <Title level={3} style={{ color: "white" }}>En bit av Köpenhamn – mitt i stan</Title>
-              <Paragraph style={{ color: "#ccc" }}>
-                Lilla Köpenhamn är mer än en restaurang – det är ett hem för dansk matglädje. Från rustika rätter till eleganta tilltugg, skapar vi upplevelser du minns.
+            <Card style={{ backgroundColor: "#cbc2b8", color: "black" }} bordered={false}>
+              <Title level={3} style={{ color: "black" }}>En bit av Köpenhamn – mitt i stan</Title>
+              <Paragraph style={{ color: "#black" }}>
+                Lilla Köpenhamn är mer än en restaurang - det är ett hem för matglädje, vänner och upplevelser. Från rustika rätter till eleganta tilltugg, blandat med dejlig atmosfär och trivsam miljö, skapar vi upplevelser du minns och vill återkomma till. 
               </Paragraph>
             </Card>
           </Col>
@@ -63,16 +65,16 @@ export default function StartSida({ onBokaClick }) {
         {/* Inlägg 2 */}
         <Row gutter={[24, 24]} style={{ marginBottom: "24px" }}>
           <Col xs={24} md={12}>
-            <Card style={{ backgroundColor: "#716559", color: "white" }} bordered={false}>
-              <Title level={3} style={{ color: "white" }}>Färska ostron varje helg</Title>
-              <Paragraph style={{ color: "#ccc" }}>
-                Helgen närmar sig? Vi serverar färska ostron direkt från västkusten – med citron, vinägrett och kärlek. Avnjut med ett glas bubbel för en smakupplevelse utöver det vanliga.
+            <Card style={{ backgroundColor: "#cbc2b8", color: "black" }} bordered={false}>
+              <Title level={3} style={{ color: "black" }}>Färska ostron varje dag</Title>
+              <Paragraph style={{ color: "#black" }}>
+                Det är alltid tid för ostron. Vi serverar färska ostron direkt från västkusten - med citron, vinägrett och kärlek. Avnjut med ett glas bubbel för en smakupplevelse utöver det vanliga. 
               </Paragraph>
             </Card>
           </Col>
           <Col xs={24} md={12}>
             <Image
-              src="https://receptfavoriter.se/sites/default/files/ostron_1060.jpg"
+              src={`${process.env.PUBLIC_URL}/ostronLK.jpg`}
               alt="Ostron"
               width="100%"
               preview={false}
@@ -84,17 +86,17 @@ export default function StartSida({ onBokaClick }) {
         <Row gutter={[24, 24]} style={{ marginBottom: "24px" }}>
           <Col xs={24} md={12}>
             <Image
-              src="https://media.istockphoto.com/id/1131977929/sv/foto/upps%C3%A4ttning-av-skandinaviska-mellanm%C3%A5l-mer-fr%C3%A5n-smorrebrod-traditionella-danska-%C3%B6ppna.jpg?s=612x612&w=0&k=20&c=WnOQlTOKpvutnOUIO0ggF-BWrnRLjPqa9yhrZ358YmI="
+              src={`${process.env.PUBLIC_URL}/smorrebrod.jpg`}
               alt="Smörrebröd"
               width="100%"
               preview={false}
             />
           </Col>
           <Col xs={24} md={12}>
-            <Card style={{ backgroundColor: "#716559", color: "white" }} bordered={false}>
-              <Title level={3} style={{ color: "white" }}>Smørrebrød – En klassiker i ny tappning</Title>
-              <Paragraph style={{ color: "#ccc" }}>
-                Våra smørrebrød är en hyllning till det danska arvet – vackert upplagda, rikligt toppade och med moderna smaker. Perfekt till lunch, brunch eller som del av en avsmakningsmeny.
+            <Card style={{ backgroundColor: "#cbc2b8", color: "black" }} bordered={false}>
+              <Title level={3} style={{ color: "black" }}>Smørrebrød – En klassiker i ny tappning</Title>
+              <Paragraph style={{ color: "#black" }}>
+                Våra smørrebrød är en hyllning till det danska arvet - vackert upplagda, rikligt toppade och med moderna smaker. Blanda själv vilka du vill ha och hur många. En öl och en ”lille en” till det är perfekt som lunch, brunch, tilltugg eller som helst när suget infaller sig.
               </Paragraph>
             </Card>
           </Col>

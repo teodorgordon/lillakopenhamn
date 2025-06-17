@@ -56,27 +56,42 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   };
 
   const MenuItems = (
-    <Menu
-      mode={screens.md ? "horizontal" : "vertical"}
-      theme="dark"
-      className="custom-menu"
-      selectedKeys={[getMenuKey(currentPath)]}
-      style={{
-        backgroundColor: screens.md ? "#1f1f1f" : "#1f1f1f",
-        borderBottom: "none",
+  <Menu
+    mode={screens.md ? "horizontal" : "vertical"}
+    className="custom-menu"
+    selectedKeys={[getMenuKey(currentPath)]}
+    style={{
+      backgroundColor: "#ffffff",
+      borderBottom: "none",
+    }}
+  >
+    <Menu.Item key="2" icon={<FaScroll />}>
+      <Link to="/Meny" onClick={() => setIsDrawerOpen(false)}>Meny</Link>
+    </Menu.Item>
+    <Menu.Item
+      key="3"
+      icon={<FaCalendarAlt />}
+      onClick={() => {
+        setIsModalVisible(true);
+        setIsDrawerOpen(false);
       }}
     >
-      <Menu.Item key="2" icon={<FaScroll />}><Link to="/Meny">Meny</Link></Menu.Item>
-      <Menu.Item key="3" icon={<FaCalendarAlt />} onClick={() => setIsModalVisible(true)}>Boka bord</Menu.Item>
-      <Menu.Item key="4" icon={<FaMapMarked />}><Link to="/Hitta">Hitta hit</Link></Menu.Item>
-      <Menu.Item key="5" icon={<FaInfoCircle />}><Link to="/OmOss">Om oss</Link></Menu.Item>
-    </Menu>
-  );
+      Boka bord
+    </Menu.Item>
+    <Menu.Item key="4" icon={<FaMapMarked />}>
+      <Link to="/Hitta" onClick={() => setIsDrawerOpen(false)}>Hitta hit</Link>
+    </Menu.Item>
+    <Menu.Item key="5" icon={<FaInfoCircle />}>
+      <Link to="/OmOss" onClick={() => setIsDrawerOpen(false)}>Om oss</Link>
+    </Menu.Item>
+  </Menu>
+);
+
 
   return (
     <Layout>
       {/* Stor logga */}
-      <div style={{ backgroundColor: "#1f1f1f", padding: "5px 0", textAlign: "center" }}>
+      <div style={{ backgroundColor: "#FFFFFF", padding: "5px 0", textAlign: "center" }}>
         <Link to="/">
           <img src={`${process.env.PUBLIC_URL}/logo2.png`} alt="Lilla Köpenhamn" style={{ maxHeight: "100px" }} />
         </Link>
@@ -89,7 +104,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
           top: 0,
           zIndex: 100,
           width: "100%",
-          backgroundColor: "#1f1f1f",
+          backgroundColor: "#ffffff",
           display: "flex",
           alignItems: "center",
           padding: "0 24px",
@@ -144,7 +159,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", alignItems: "center", gap: "16px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-              <a href="https://www.facebook.com/lillakopenhamn" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "20px" }}><FaFacebookF /></a>
+              <a href="https://www.facebook.com/profile.php?id=61576269208161" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "20px" }}><FaFacebookF /></a>
               <a href="https://www.instagram.com/lillakopenhamn" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "22px" }}><FaInstagram /></a>
               <span style={{ color: "#ccc", marginLeft: 8 }}>Följ oss i sociala medier för erbjudanden och andra nyheter.</span>
             </div>
@@ -153,7 +168,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
             </div>
           </div>
           <div style={{ textAlign: "center", marginTop: "32px", fontSize: "14px", color: "#999" }}>
-            © 2025 Lilla Köpenhamn · Org. nr: 556789-1234
+            © 2025 Lilla Köpenhamn · Org. nr: 556733-7851
           </div>
         </div>
       </Footer>

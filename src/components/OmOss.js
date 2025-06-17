@@ -5,14 +5,14 @@ const { Title, Paragraph } = Typography;
 
 export default function OmOss() {
   return (
-    <div style={{ background: "#141414", minHeight: "100vh", padding: "48px 24px" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto", color: "white" }}>
-        <Title level={2} style={{ color: "white" }}>Om oss</Title>
-        <Paragraph style={{ color: "#ccc", fontSize: "16px" }}>
-          Lilla Köpenhamn är en dansk-inspirerad restaurang med hjärtat i Göteborg. Vi grundades av en familj med passion för smaker från både det nordiska köket och kontinenten.
+    <div style={{ background: "#fff", minHeight: "100vh", padding: "48px 24px" }}>
+      <div style={{ maxWidth: 1000, margin: "0 auto", color: "black" }}>
+        <Title level={2} style={{ color: "black" }}>Om oss</Title>
+        <Paragraph style={{ color: "#000", fontSize: "16px" }}>
+          Lilla Köpenhamn är en danskinspirerad restaurang med hjärtat i Göteborg. En plats att trivas på, skapa gemenskap, äta och dricka gott med smaker från både det nordiska köket och kontinenten. 
         </Paragraph>
-        <Paragraph style={{ color: "#ccc", fontSize: "16px" }}>
-          Hos oss hittar du klassiska smørrebrød, ostron, bubbel och andra små men stora upplevelser. Vi fokuserar på råvaror i säsong och en atmosfär som bjuder in till både fest och vardag.
+        <Paragraph style={{ color: "#000", fontSize: "16px" }}>
+          Hos oss hittar du klassiska smørrebrød, ostron, varmrätter, desserter och goda drycker till det. Vi fokuserar på råvaror i säsong ocean atmosfär som bjuder in till både fest och vardag. 
         </Paragraph>
 
         <Row gutter={[24, 24]} style={{ marginTop: 32 }}>
@@ -26,9 +26,9 @@ export default function OmOss() {
             />
           </Col>
           <Col xs={24} md={12}>
-            <Card style={{ backgroundColor: "#716559", color: "white" }} bordered={false}>
-              <Title level={4} style={{ color: "white" }}>Vår filosofi</Title>
-              <Paragraph style={{ color: "#ddd" }}>
+            <Card style={{ backgroundColor: "#cbc2b8", color: "black" }} bordered={false}>
+              <Title level={4} style={{ color: "black" }}>Vår filosofi</Title>
+              <Paragraph style={{ color: "#000" }}>
                 Maten ska vara ärlig, vacker och inspirerande. Vi tror på kvalitet före kvantitet, nära relationer till våra leverantörer och ett varmt välkomnande till varje gäst.
               </Paragraph>
             </Card>

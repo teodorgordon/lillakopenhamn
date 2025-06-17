@@ -6,7 +6,7 @@ const { Panel } = Collapse;
 
 export default function HittaHit() {
     return (
-        <div style={{ background: "#141414", minHeight: "100vh", padding: "48px 24px" }}>
+        <div style={{ background: "#fff", minHeight: "100vh", padding: "48px 24px" }}>
             <div style={{ maxWidth: 1000, margin: "0 auto", color: "white" }}>
 
                 <Title level={2} style={{ color: "white", marginBottom: 24 }}>Hitta hit</Title>
@@ -15,7 +15,7 @@ export default function HittaHit() {
                     <Collapse defaultActiveKey={["1"]}>
                         <Panel header="Adress & öppettider" key="1">
                             <Paragraph><strong>Adress:</strong> Vasagatan 9, 411 24 Göteborg</Paragraph>
-                            <Paragraph><strong>Telefonnummer:</strong> 031–123 456</Paragraph>
+                            <Paragraph><strong>Telefonnummer:</strong> 031-762 61 50</Paragraph>
                             <Paragraph><strong>Öppettider:</strong></Paragraph>
                             <ul>
                                 <li>Torsdag: 16:00 – sent</li>
@@ -30,19 +30,16 @@ export default function HittaHit() {
                 <Card>
                     <iframe
                         title="Karta till Lilla Köpenhamn"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2130.345341215108!2d11.968483915979983!3d57.707232581107846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTfCsDQyJzI2LjAiTiAxMcKwNTgnMDYuNiJF!5e0!3m2!1ssv!2sse!4v1700000000000!5m2!1ssv!2sse"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.1108361612473!2d11.962336177226073!3d57.69758674054842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36c27ffc5a7%3A0xc543e9af05c868b5!2sVasagatan%209%2C%20411%2024%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1750192634654!5m2!1ssv!2sse"
                         width="100%"
-                        height="400"
+                        height="500"
                         style={{ border: 0 }}
                         allowFullScreen=""
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </Card>
-
             </div>
-
-
         </div>
     );
 }

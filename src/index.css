@@ -20,19 +20,21 @@ code {
 .custom-menu .ant-menu-item {
   font-size: 18px;
   font-weight: 500;
-  color: #fff;
+  color: black; /* text is white by default */
 }
 
 .custom-menu .ant-menu-item:hover {
-  background-color: #3a3a3a !important; /* ljusare grå hover */
-  color: #fff !important;
-  border-bottom: 2px solid white !important;
+  background-color: #cbc2b8 !important; /* lighter grey on hover */
+  color: #2e2e2e !important; /* dark text when hovered for contrast */
+  border-bottom: 2px solid black !important;
 }
 
 .custom-menu .ant-menu-item-selected {
-  background-color: #2e2e2e !important; /* INGEN blå highlight */
-  color: #fff !important;
+  background-color: #a9a39a !important; /* slightly darker variation of cbc2b8 for selected state */
+  color: black !important;
+  
 }
+
 
 /* Ta bort blå underline på aktiv menyval */
 .ant-menu-horizontal > .ant-menu-item::after,
@@ -48,7 +50,7 @@ code {
 
 
 .custom-menu .ant-menu-item-selected::after {
-  border-bottom: 2px solid white !important;
+  border-bottom: 2px solid black !important;
 }
 
 .ant-menu-dark .ant-menu-item-selected {
@@ -62,9 +64,9 @@ code {
 }
 
 .boka-bord-knapp {
-  background-color: #716559;
-  border-color: #716559;
-  color: #fff;
+  background-color: #cbc2b8;
+  border-color: #cbc2b8;
+  color: #000;
   font-size: 18px;
   padding: 24px 24px;
   font-weight: 500;
@@ -72,9 +74,9 @@ code {
 
 .boka-bord-knapp:hover,
 .boka-bord-knapp:focus {
-  background-color: #5f574d !important;
-  border-color: #5f574d !important;
-  color: #fff !important;
+  background-color: #a29b93 !important;
+  border-color: #a29b93 !important;
+  color: #000 !important;
 }
 
 
