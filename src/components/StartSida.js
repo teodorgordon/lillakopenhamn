@@ -152,7 +152,7 @@ export default function StartSida({ onBokaClick }) {
   <Row gutter={0} style={{ marginBottom: "24px" }}>
     <Col xs={24} md={12} style={{ padding: 0 }}>
       <Image
-        src={`${process.env.PUBLIC_URL}/lillakopenhamn.jpg`}
+        src={`${process.env.PUBLIC_URL}/servering.png`}
         alt="Bordsdukning"
         width="100%"
         height="100%"
