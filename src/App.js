@@ -54,17 +54,17 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
 
   const SocialIcons = (
     <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "20px" }}><FaFacebookF /></a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "22px" }}><FaInstagram /></a>
+      <a href="https://www.facebook.com/profile.php?id=61576269208161" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "20px" }}><FaFacebookF /></a>
+      <a href="https://www.instagram.com/lillakopenhamn" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "22px" }}><FaInstagram /></a>
     </div>
   );
 
   return (
     <Layout>
       <Header className="custom-header">
-<Link to="/" className="logo-container">
-  <img src={`${process.env.PUBLIC_URL}/logowhite.png`} alt="Logo" className="logo-image" />
-</Link>
+        <Link to="/" className="logo-container">
+          <img src={`${process.env.PUBLIC_URL}/logowhite.png`} alt="Logo" className="logo-image" />
+        </Link>
         {screens.md ? (
           <>
             <div className="menu-container">{MenuItems}</div>
@@ -82,7 +82,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
         <BokaBordModal visible={isModalVisible} onClose={() => setIsModalVisible(false)} />
       </Header>
       <Content>{page}</Content>
-       {/* Footer */}
+      {/* Footer */}
       <Footer style={{ background: "#1f1f1f", color: "#ccc", padding: "32px 40px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", alignItems: "center", gap: "16px" }}>

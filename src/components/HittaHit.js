@@ -9,7 +9,7 @@ export default function HittaHit() {
         <div style={{ background: "#fff", minHeight: "100vh", padding: "48px 24px" }}>
             <div style={{ maxWidth: 1000, margin: "0 auto", color: "white" }}>
 
-                <Title level={2} style={{ color: "white", marginBottom: 24 }}>Hitta hit</Title>
+                <Title level={2} style={{ color: "black", marginBottom: 24 }}>Hitta hit</Title>
 
                 <Card style={{ marginBottom: 24 }}>
                     <Collapse defaultActiveKey={["1"]}>

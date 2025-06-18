@@ -39,7 +39,7 @@ body {
 
 .custom-menu {
   background: #0f0f0f;
-  width: flex;
+  width: auto;
 }
 
 .custom-menu .ant-menu-item {
