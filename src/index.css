@@ -51,7 +51,7 @@ body {
 }
 
 .custom-menu .ant-menu-item-selected {
-  border-bottom: 3px solid #cbc2b8 !important;
+  border-bottom: 2px solid #cbc2b8 !important;
   margin-bottom: -1px;
   background-color: transparent !important;
 }
