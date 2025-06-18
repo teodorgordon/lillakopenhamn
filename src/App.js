@@ -1,28 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  Layout,
-  Menu,
-  Drawer,
-  Button as AntButton,
-  Grid,
-} from "antd";
-import {
-  FaScroll,
-  FaCalendarAlt,
-  FaMapMarked,
-  FaInfoCircle,
-  FaFacebookF,
-  FaInstagram,
-  FaBars,
-} from "react-icons/fa";
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useLocation,
-} from "react-router-dom";
-
+import { Layout, Menu, Drawer, Button as AntButton, Grid } from "antd";
+import { FaFacebookF, FaInstagram, FaBars } from "react-icons/fa";
+import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import BokaBordModal from "./components/BokaBord";
 import StartSida from "./components/StartSida";
 import Meny from "./components/Meny";
@@ -38,15 +17,6 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   const currentPath = location.pathname;
   const screens = useBreakpoint();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [showSmallLogo, setShowSmallLogo] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowSmallLogo(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const getMenuKey = (path) => {
     if (path.startsWith("/Meny")) return "2";
@@ -56,105 +26,63 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   };
 
   const MenuItems = (
-  <Menu
-    mode={screens.md ? "horizontal" : "vertical"}
-    className="custom-menu"
-    selectedKeys={[getMenuKey(currentPath)]}
-    style={{
-      backgroundColor: "#ffffff",
-      borderBottom: "none",
-    }}
-  >
-    <Menu.Item key="2" icon={<FaScroll />}>
-      <Link to="/Meny" onClick={() => setIsDrawerOpen(false)}>Meny</Link>
-    </Menu.Item>
-    <Menu.Item
-      key="3"
-      icon={<FaCalendarAlt />}
-      onClick={() => {
-        setIsModalVisible(true);
-        setIsDrawerOpen(false);
-      }}
+    <Menu
+      mode={screens.md ? "horizontal" : "vertical"}
+      className="custom-menu"
+      selectedKeys={[getMenuKey(currentPath)]}
     >
-      Boka bord
-    </Menu.Item>
-    <Menu.Item key="4" icon={<FaMapMarked />}>
-      <Link to="/Hitta" onClick={() => setIsDrawerOpen(false)}>Hitta hit</Link>
-    </Menu.Item>
-    <Menu.Item key="5" icon={<FaInfoCircle />}>
-      <Link to="/OmOss" onClick={() => setIsDrawerOpen(false)}>Om oss</Link>
-    </Menu.Item>
-  </Menu>
-);
+      <Menu.Item key="2">
+        <Link to="/Meny" onClick={() => setIsDrawerOpen(false)}>Meny</Link>
+      </Menu.Item>
+      <Menu.Item
+        key="3"
+        onClick={() => {
+          setIsModalVisible(true);
+          setIsDrawerOpen(false);
+        }}
+      >
+        Boka bord
+      </Menu.Item>
+      <Menu.Item key="4">
+        <Link to="/Hitta" onClick={() => setIsDrawerOpen(false)}>Hitta hit</Link>
+      </Menu.Item>
+      <Menu.Item key="5">
+        <Link to="/OmOss" onClick={() => setIsDrawerOpen(false)}>Om oss</Link>
+      </Menu.Item>
+    </Menu>
+  );
 
+  const SocialIcons = (
+    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "20px" }}><FaFacebookF /></a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "22px" }}><FaInstagram /></a>
+    </div>
+  );
 
   return (
     <Layout>
-      {/* Stor logga */}
-      <div style={{ backgroundColor: "#FFFFFF", padding: "30px", textAlign: "center" }}>
-        <Link to="/">
-          <img src={`${process.env.PUBLIC_URL}/logo2.png`} alt="Lilla Köpenhamn" style={{ maxHeight: "100px" }} />
-        </Link>
-      </div>
-
-      {/* Header med lilla loggan */}
-      <Header
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-          width: "100%",
-          backgroundColor: "#ffffff",
-          display: "flex",
-          alignItems: "center",
-          padding: "0 24px",
-        }}
-      >
-        {/* Lilla loggan */}
-        <Link
-          to="/"
-          style={{
-            marginRight: 25,
-            display: "flex",
-            alignItems: "center",
-            height: "100%",
-            opacity: showSmallLogo ? 1 : 0,
-            transition: "opacity 0.3s ease-in-out",
-          }}
-        >
-          <img src={`${process.env.PUBLIC_URL}/logo3.png`} alt="Lilla Köpenhamn logotyp" style={{ height: "50px", objectFit: "contain" }} />
-        </Link>
-
-        {/* Meny */}
+      <Header className="custom-header">
+<Link to="/" className="logo-container">
+  <img src={`${process.env.PUBLIC_URL}/logowhite.png`} alt="Logo" className="logo-image" />
+</Link>
         {screens.md ? (
-          <div style={{ flex: 1 }}>{MenuItems}</div>
+          <>
+            <div className="menu-container">{MenuItems}</div>
+            <div>{SocialIcons}</div>
+          </>
         ) : (
           <>
-            <AntButton
-              icon={<FaBars />}
-              type="text"
-              style={{ marginLeft: "auto", color: "black" }}
-              onClick={() => setIsDrawerOpen(true)}
-            />
-            <Drawer
-              title="Meny"
-              placement="right"
-              onClose={() => setIsDrawerOpen(false)}
-              open={isDrawerOpen}
-              bodyStyle={{ padding: 0, background: "#fff" }}
-              headerStyle={{ background: "#fff", color: "#fff" }}
-            >
+            <AntButton icon={<FaBars />} type="text" onClick={() => setIsDrawerOpen(true)} style={{ color: "white" }} />
+            <Drawer title="Meny" placement="right" onClose={() => setIsDrawerOpen(false)} open={isDrawerOpen} bodyStyle={{ padding: 0, background: "#000" }} headerStyle={{ background: "#000", color: "#fff" }}>
               {MenuItems}
+              <div style={{ padding: "16px 24px", borderTop: "1px solid #333" }}>{SocialIcons}</div>
             </Drawer>
           </>
         )}
-
         <BokaBordModal visible={isModalVisible} onClose={() => setIsModalVisible(false)} />
       </Header>
-
-      <Content style={{ background: "#141414" }}>{page}</Content>
-
-      {/* Footer */}
+      <Content>{page}</Content>
+       {/* Footer */}
       <Footer style={{ background: "#1f1f1f", color: "#ccc", padding: "32px 40px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", alignItems: "center", gap: "16px" }}>
@@ -181,10 +109,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<StartSida onBokaClick={() => setIsModalVisible(true)} />} />}
-        />
+        <Route path="/" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<StartSida onBokaClick={() => setIsModalVisible(true)} />} />} />
         <Route path="/Meny" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Meny />} />} />
         <Route path="/Hitta" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<HittaHit />} />} />
         <Route path="/OmOss" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<OmOss />} />} />

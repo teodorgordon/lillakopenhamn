@@ -1,113 +1,114 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: black;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.custom-header {
+  background: black;
+  display: flex;
+  height: 75px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-image {
+  height: 50px;
+  display: block;
+}
+
+.menu-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-menu {
+  background: black;
 }
 
 .custom-menu .ant-menu-item {
-  font-size: 16px;
-  font-weight: 500;
+  color: white !important;
 }
 
-.custom-menu .ant-menu-item {
-  font-size: 18px;
-  font-weight: 500;
-  color: black; /* text is white by default */
-}
-
-.custom-menu .ant-menu-item:hover {
-  background-color: #cbc2b8 !important; /* lighter grey on hover */
-  color: #2e2e2e !important; /* dark text when hovered for contrast */
-  border-bottom: 2px solid black !important;
+.custom-menu .ant-menu-item::after {
+  border-bottom: none !important;
 }
 
 .custom-menu .ant-menu-item-selected {
-  background-color: #a9a39a !important; /* slightly darker variation of cbc2b8 for selected state */
-  color: black !important;
-  
+  border-bottom: 3px solid #cbc2b8 !important;
+  margin-bottom: -1px;
+  background-color: transparent !important;
 }
 
-
-/* Ta bort blå underline på aktiv menyval */
-.ant-menu-horizontal > .ant-menu-item::after,
-.ant-menu-horizontal > .ant-menu-submenu::after {
-  border-bottom: none !important;
+.banner-container {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Ta bort ink bar (blå linje som följer menyval) */
-.ant-menu-horizontal .ant-menu-item-selected::after {
-  border-bottom: none !important;
-  transition: none !important;
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent 60%, black 100%);
 }
 
-
-.custom-menu .ant-menu-item-selected::after {
-  border-bottom: 2px solid black !important;
+.banner-logo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
 }
 
-.ant-menu-dark .ant-menu-item-selected {
-  border-bottom: none !important;
-  box-shadow: none !important;
+.banner-buttons {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
 }
 
-.ant-menu-dark .ant-menu-item-active {
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-.boka-bord-knapp {
-  background-color: #cbc2b8;
-  border-color: #cbc2b8;
-  color: #000;
+.banner-button {
+  background: transparent;
+  border: 2px solid #cbc2b8;
+  color: white;
+  padding: 12px 24px;
   font-size: 18px;
-  padding: 24px 24px;
-  font-weight: 500;
 }
 
-.boka-bord-knapp:hover,
-.boka-bord-knapp:focus {
-  background-color: #a29b93 !important;
-  border-color: #a29b93 !important;
-  color: #000 !important;
+.banner-button:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-
-.skicka-bokning-knapp {
-  background-color: #716559;
-  border-color: #716559;
-  color: #fff;
+.custom-footer {
+  background: black;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
 }
 
-.skicka-bokning-knapp:hover,
-.skicka-bokning-knapp:focus {
-  background-color: #5f574d !important;
-  border-color: #5f574d !important;
-  color: #fff !important;
+.custom-footer a {
+  color: #ccc;
+  margin: 0 10px;
 }
 
-
-.custom-menu .ant-menu-item {
-  font-size: 16px;
-  padding: 0 20px;
-}
-
-.mobile-menu-button {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .desktop-menu {
-    display: none !important;
-  }
-  .mobile-menu-button {
-    display: inline-block;
-  }
+.ant-drawer-close {
+  color: white !important;
 }
