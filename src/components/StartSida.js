@@ -14,7 +14,7 @@ export default function StartSida({ onBokaClick }) {
           backgroundImage: `url(${process.env.PUBLIC_URL}/banner.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "800px",
+          height: "700px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

@@ -91,7 +91,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   return (
     <Layout>
       {/* Stor logga */}
-      <div style={{ backgroundColor: "#FFFFFF", padding: "50px", textAlign: "center" }}>
+      <div style={{ backgroundColor: "#FFFFFF", padding: "30px", textAlign: "center" }}>
         <Link to="/">
           <img src={`${process.env.PUBLIC_URL}/logo2.png`} alt="Lilla Köpenhamn" style={{ maxHeight: "100px" }} />
         </Link>
