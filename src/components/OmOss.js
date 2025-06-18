@@ -12,7 +12,7 @@ export default function OmOss() {
           Lilla Köpenhamn är en danskinspirerad restaurang med hjärtat i Göteborg. En plats att trivas på, skapa gemenskap, äta och dricka gott med smaker från både det nordiska köket och kontinenten. 
         </Paragraph>
         <Paragraph style={{ color: "#000", fontSize: "16px" }}>
-          Hos oss hittar du klassiska smørrebrød, ostron, varmrätter, desserter och goda drycker till det. Vi fokuserar på råvaror i säsong ocean atmosfär som bjuder in till både fest och vardag. 
+          Hos oss hittar du klassiska smørrebrød, ostron, varmrätter, desserter och goda drycker till det. Vi fokuserar på råvaror i säsong och en atmosfär som bjuder in till både fest och vardag. 
         </Paragraph>
 
         <Row gutter={[24, 24]} style={{ marginTop: 32 }}>
@@ -29,7 +29,7 @@ export default function OmOss() {
             <Card style={{ backgroundColor: "#cbc2b8", color: "black" }} bordered={false}>
               <Title level={4} style={{ color: "black" }}>Vår filosofi</Title>
               <Paragraph style={{ color: "#000" }}>
-                Maten ska vara ärlig, vacker och inspirerande. Vi tror på kvalitet före kvantitet, nära relationer till våra leverantörer och ett varmt välkomnande till varje gäst. Här ska du känna dig som hemma, en plats du vill återkomma till och där du bemöts med kärlek. 
+                Maten ska vara ärlig, vacker och inspirerande. Vi tror på kvalitet före kvantitet, nära relationer till våra leverantörer och ett varmt välkomnande till varje gäst. Här ska du känna dig som hemma, en plats du vill återkomma till och där du bemöts med värme. 
               </Paragraph>
             </Card>
           </Col>

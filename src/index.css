@@ -6,7 +6,7 @@ body {
 }
 
 .custom-header {
-  background: black;
+  background: #0f0f0f;
   display: flex;
   height: 75px;
   align-items: center;
@@ -29,13 +29,17 @@ body {
 }
 
 .menu-container {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }
 
+
 .custom-menu {
-  background: black;
+  background: #0f0f0f;
+  width: flex;
 }
 
 .custom-menu .ant-menu-item {
