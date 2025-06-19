@@ -5,7 +5,7 @@ const { Title, Paragraph } = Typography;
 
 export default function OmOss() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh", padding: "48px 24px" }}>
+    <div style={{ background: "#fff", minHeight: "100vh", padding: "76px 24px" }}>
       <div style={{ maxWidth: 800, margin: "0 auto", color: "black" }}>
 
         <Title level={2} style={{ color: "black", fontSize: "32px" }}>

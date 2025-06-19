@@ -17,6 +17,26 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   const currentPath = location.pathname;
   const screens = useBreakpoint();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  if (currentPath === "/") {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // kontroll direkt
+  } else {
+    setIsScrolled(true); // undermenyer ska alltid vara fasta färg
+  }
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [currentPath]);
 
   const getMenuKey = (path) => {
     if (path.startsWith("/Meny")) return "2";
@@ -61,7 +81,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
 
   return (
     <Layout>
-      <Header className="custom-header">
+      <Header className={`custom-header ${isScrolled ? "scrolled" : ""}`}>
         <Link to="/" className="logo-container">
           <img src={`${process.env.PUBLIC_URL}/logowhite.png`} alt="Logo" className="logo-image" />
         </Link>

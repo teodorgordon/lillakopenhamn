@@ -6,7 +6,7 @@ const { Panel } = Collapse;
 
 export default function HittaHit() {
     return (
-        <div style={{ background: "#fff", minHeight: "100vh", padding: "48px 24px" }}>
+        <div style={{ background: "#fff", minHeight: "100vh", padding: "76px 24px" }}>
             <div style={{ maxWidth: 1000, margin: "0 auto", color: "white" }}>
 
                 <Title level={2} style={{ color: "black", marginBottom: 24 }}>Hitta hit</Title>

@@ -277,6 +277,50 @@ export default function StartSida({ onBokaClick }) {
       </Card>
     </Col>
   </Row>
+
+<Row gutter={0} style={{ marginBottom: "24px" }}>
+    <Col xs={24} md={12} style={{ padding: 0, display: "flex" }}>
+      <Card
+        style={{
+          backgroundColor: "#cbc2b8",
+          color: "black",
+          margin: 0,
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          border: "none",
+          borderRadius: 0,
+          padding: "40px",
+        }}
+        bordered={false}
+      >
+        <div style={{ maxWidth: "650px", textAlign: "center" }}>
+          <Title level={2} style={{ color: "black", fontSize: "32px" }}>
+            Skön uteservering för alla stunder
+          </Title>
+          <Paragraph style={{ color: "black", fontSize: "18px" }}>
+            Vasagatans bästa uteservering med bar, sköna platser och 
+            eftermiddagssol. Kom förbi och slå dig ner. Lyssna på musik 
+            och stadens puls. Beställ det du vill ha, njut och koppla av. 
+          </Paragraph>
+        </div>
+      </Card>
+    </Col>
+    <Col xs={24} md={12} style={{ padding: 0 }}>
+      <Image
+        src={`${process.env.PUBLIC_URL}/uteservering.jpeg`}
+        alt="Uteservering"
+        width="100%"
+        height="100%"
+        preview={false}
+        style={{ display: "block", objectFit: "cover", height: "100%" }}
+      />
+    </Col>
+  </Row>
+
+
 </div>
 
     </div>

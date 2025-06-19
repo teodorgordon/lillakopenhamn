@@ -6,16 +6,26 @@ body {
 }
 
 .custom-header {
-  background: #0f0f0f;
+  background: transparent;
   display: flex;
   height: 75px;
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
+  justify-content: space-between;
+  transition: background 0.3s ease, opacity 0.3s ease;
 }
+
+.custom-header.scrolled {
+  background: #0f0f0f;
+  opacity: 1;
+}
+
+
 
 .logo-container {
   display: flex;
@@ -38,7 +48,7 @@ body {
 
 
 .custom-menu {
-  background: #0f0f0f;
+  background: transparent; /* Ändra från #0f0f0f till transparent */
   width: auto;
 }
 
