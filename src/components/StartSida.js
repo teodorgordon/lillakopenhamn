@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const { Title, Paragraph } = Typography;
 
 export default function StartSida({ onBokaClick }) {
- const images = ["Banner1.jpg", "Banner2.jpeg", "Banner3.jpeg"];
+ const images = ["Banner2.jpeg", "Banner1.jpg", "Banner3.jpeg"];
 
   const [showFirst, setShowFirst] = useState(true);
   const [firstSrc, setFirstSrc] = useState(`${process.env.PUBLIC_URL}/${images[0]}`);

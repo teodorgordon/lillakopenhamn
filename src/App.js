@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Layout, Menu, Drawer, Button as AntButton, Grid } from "antd";
+import { Layout, Menu, Drawer, Button as AntButton } from "antd";
 import { FaFacebookF, FaInstagram, FaBars } from "react-icons/fa";
 import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import BokaBordModal from "./components/BokaBord";
@@ -10,33 +10,38 @@ import OmOss from "./components/OmOss";
 import Personuppgifter from "./components/Personuppgifter";
 
 const { Header, Content, Footer } = Layout;
-const { useBreakpoint } = Grid;
 
 function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   const location = useLocation();
   const currentPath = location.pathname;
-  const screens = useBreakpoint();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
+  // Uppdatera menytyp vid fönsterstorlek
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Scroll-effekt på header
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    if (currentPath === "/") {
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
     } else {
-      setIsScrolled(false);
+      setIsScrolled(true);
     }
-  };
 
-  if (currentPath === "/") {
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // kontroll direkt
-  } else {
-    setIsScrolled(true); // undermenyer ska alltid vara fasta färg
-  }
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [currentPath]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [currentPath]);
 
   const getMenuKey = (path) => {
     if (path.startsWith("/Meny")) return "2";
@@ -47,7 +52,7 @@ useEffect(() => {
 
   const MenuItems = (
     <Menu
-      mode={screens.md ? "horizontal" : "vertical"}
+      mode={!isMobile ? "horizontal" : "vertical"}
       className="custom-menu"
       selectedKeys={[getMenuKey(currentPath)]}
     >
@@ -85,24 +90,36 @@ useEffect(() => {
         <Link to="/" className="logo-container">
           <img src={`${process.env.PUBLIC_URL}/logowhite.png`} alt="Logo" className="logo-image" />
         </Link>
-        {screens.md ? (
+
+        {!isMobile ? (
           <>
             <div className="menu-container">{MenuItems}</div>
-            <div>{SocialIcons}</div>
+            <div style={{ position: "absolute", right: 24, top: "50%", transform: "translateY(-50%)" }}>
+              {SocialIcons}
+            </div>
           </>
         ) : (
-          <>
+          <div style={{ position: "absolute", right: 24, top: "50%", transform: "translateY(-50%)" }}>
             <AntButton icon={<FaBars />} type="text" onClick={() => setIsDrawerOpen(true)} style={{ color: "white" }} />
-            <Drawer title="Meny" placement="right" onClose={() => setIsDrawerOpen(false)} open={isDrawerOpen} bodyStyle={{ padding: 0, background: "#000" }} headerStyle={{ background: "#000", color: "#fff" }}>
+            <Drawer
+              title="Meny"
+              placement="right"
+              onClose={() => setIsDrawerOpen(false)}
+              open={isDrawerOpen}
+              bodyStyle={{ padding: 0, background: "#000" }}
+              headerStyle={{ background: "#000", color: "#fff" }}
+            >
               {MenuItems}
               <div style={{ padding: "16px 24px", borderTop: "1px solid #333" }}>{SocialIcons}</div>
             </Drawer>
-          </>
+          </div>
         )}
+
         <BokaBordModal visible={isModalVisible} onClose={() => setIsModalVisible(false)} />
       </Header>
+
       <Content>{page}</Content>
-      {/* Footer */}
+
       <Footer style={{ background: "#1f1f1f", color: "#ccc", padding: "32px 40px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", alignItems: "center", gap: "16px" }}>
@@ -125,7 +142,7 @@ useEffect(() => {
 }
 
 export default function App() {
-  const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <Router>
       <Routes>

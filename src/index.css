@@ -54,7 +54,10 @@ body {
 
 .custom-menu .ant-menu-item {
   color: white !important;
+  font-size: 18px; /* Öka textstorlek */
+  font-weight: 500; /* Valfritt: lite fetare text */
 }
+
 
 .custom-menu .ant-menu-item::after {
   border-bottom: none !important;
