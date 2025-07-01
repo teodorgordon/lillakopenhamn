@@ -127,7 +127,26 @@ export default function StartSida({ onBokaClick }) {
         >
           Boka bord
         </Button>
-        <Link to="/Meny">
+
+        <Button
+          style={{
+            background: "transparent",
+            border: "2px solid #cbc2b8",
+            color: "#fff",
+            fontSize: "18px",
+            padding: "20px 40px",
+            fontWeight: "500",
+            borderRadius: "0",
+          }}
+          onClick={onBokaClick}
+        >
+          Meny
+        </Button>
+
+
+
+
+        {/* <Link to="/Meny">
           <Button
             style={{
               background: "transparent",
@@ -141,7 +160,7 @@ export default function StartSida({ onBokaClick }) {
           >
             Meny
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </div>
 

@@ -36,52 +36,18 @@ export default function BokaBordModal({ visible, onClose }) {
 
   return (
     <Modal
-      title="Bokningsförfrågan"
+      title="Under uppbyggnad"
       open={visible}
       onCancel={onClose}
       footer={null}
     >
       <Form layout="vertical" form={form} onFinish={handleFinish}>
-        <Form.Item
-          label="Namn"
-          name="namn"
-          rules={[{ required: true, message: "Vänligen ange ditt namn" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Datum"
-          name="datum"
-          rules={[{ required: true, message: "Välj ett datum" }]}
-        >
-          <DatePicker style={{ width: "100%" }} />
-        </Form.Item>
-        <Form.Item
-          label="Tid"
-          name="tid"
-          rules={[{ required: true, message: "Välj en tid" }]}
-        >
-          <TimePicker style={{ width: "100%" }} format="HH:mm" />
-        </Form.Item>
-        
-         <Form.Item
-          label="Allergier"
-          name="allergi"
-          rules={[{ message: "Skriv ner eventuella allergier" }]}
-        >
-          <Input />
-        </Form.Item>
 
-                 <Form.Item
-          label="Övrigt"
-          name="overigt"
-          rules={[{ message: "Övrigt" }]}
-        >
-          <Input />
-        </Form.Item>
+        <p>Sidan är fortfarande under uppbyggnad. Meny och bokningsfunktion kommer inom kort.</p>
+
         <Form.Item>
           <Button type="primary" htmlType="submit" block className="skicka-bokning-knapp">
-            Skicka bokning
+            Okej
           </Button>
         </Form.Item>
       </Form>

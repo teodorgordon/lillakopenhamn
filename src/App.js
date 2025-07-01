@@ -56,9 +56,20 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
       className="custom-menu"
       selectedKeys={[getMenuKey(currentPath)]}
     >
-      <Menu.Item key="2">
+      {/* <Menu.Item key="2">
         <Link to="/Meny" onClick={() => setIsDrawerOpen(false)}>Meny</Link>
+      </Menu.Item> */}
+
+      <Menu.Item
+        key="3"
+        onClick={() => {
+          setIsModalVisible(true);
+          setIsDrawerOpen(false);
+        }}
+      >
+        Meny
       </Menu.Item>
+
       <Menu.Item
         key="3"
         onClick={() => {

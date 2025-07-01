@@ -6,7 +6,7 @@ const { Content } = Layout;
 
 export default function Personuppgifter() {
   return (
-    <Content style={{ background: "#fff", padding: "48px 24px", minHeight: "100vh" }}>
+    <Content style={{ background: "#fff", padding: "76px 24px", minHeight: "100vh" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto", color: "#fff" }}>
         <Title level={2} style={{ color: "black", marginBottom: "32px" }}>
           Personuppgifter
