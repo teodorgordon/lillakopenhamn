@@ -15,7 +15,7 @@ export default function HittaHit() {
                     <Collapse defaultActiveKey={["1"]}>
                         <Panel header="Adress & öppettider" key="1">
                             <Paragraph><strong>Adress:</strong> Vasagatan 9, 411 24 Göteborg</Paragraph>
-                            <Paragraph><strong>Telefonnummer:</strong> 031-762 61 50</Paragraph>
+                            <Paragraph><strong>Telefonnummer:</strong> 031-54 05 50</Paragraph>
                             <Paragraph><strong>Öppettider:</strong></Paragraph>
                             <ul>
                                 <li>Torsdag: 16:00 – sent</li>
