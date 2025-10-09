@@ -12,7 +12,7 @@ export default function OmOss() {
           Om oss
         </Title>
         <Paragraph style={{ color: "#000", fontSize: "18px" }}>
-          Lilla Köpenhamn är en danskinspirerad restaurang med hjärtat i Göteborg. En plats att trivas på, skapa gemenskap, äta och dricka gott med smaker från både det nordiska köket och kontinenten.
+          Hos Per-Jönson är en danskinspirerad restaurang med hjärtat i Göteborg. En plats att trivas på, skapa gemenskap, äta och dricka gott med smaker från både det nordiska köket och kontinenten.
         </Paragraph>
         <Paragraph style={{ color: "#000", fontSize: "18px" }}>
           Hos oss hittar du klassiska smørrebrød, ostron, varmrätter, desserter och goda drycker till det. Vi fokuserar på råvaror i säsong och en atmosfär som bjuder in till både fest och vardag.

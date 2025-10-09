@@ -94,7 +94,7 @@ export default function StartSida({ onBokaClick }) {
       {/* Logotyp */}
       <img
         src={`${process.env.PUBLIC_URL}/logowhite.png`}
-        alt="Lilla Köpenhamn"
+        alt="Hos Per-Jönson"
         style={{
           maxWidth: "80%",
           maxHeight: "200px",
@@ -201,7 +201,7 @@ export default function StartSida({ onBokaClick }) {
             En bit av Köpenhamn – mitt i stan
           </Title>
           <Paragraph style={{ color: "black", fontSize: "18px" }}>
-            Lilla Köpenhamn är mer än en restaurang, det är ett hem för
+            Hos Per-Jönson är mer än en restaurang, det är ett hem för
             matglädje, vänner och upplevelser. Från rustika rätter till
             eleganta tilltugg, blandat med dejlig atmosfär och trivsam
             miljö, skapar vi upplevelser du minns och vill återkomma till.

@@ -23,7 +23,7 @@ export default function Personuppgifter() {
           bordered={false}
         >
           <Paragraph style={{ color: "black", marginBottom: 0 }}>
-            Din integritet är viktig för oss på Lilla Köpenhamn. Vi vill att du ska känna dig trygg när du besöker vår webbplats. <br/><br/>
+            Din integritet är viktig för oss på Hos Per-Jönson. Vi vill att du ska känna dig trygg när du besöker vår webbplats. <br/><br/>
           </Paragraph>
           <Paragraph style={{ color: "black", marginBottom: 0 }}>
             Vi samlar inte in, lagrar eller behandlar några personuppgifter via vår webbplats. Det finns inga kontaktformulär, bokningssystem med databaskoppling eller cookies som används för att spara personlig information. <br/><br/>
