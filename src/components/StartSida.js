@@ -114,6 +114,10 @@ export default function StartSida({ onBokaClick }) {
         }}
       >
         <Button
+          as="a"
+          href="https://app.bokabord.se/reservation/?hash=376d46c6f948c6345441bd2b6368a8ec"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             background: "transparent",
             border: "2px solid #cbc2b8",
@@ -123,7 +127,6 @@ export default function StartSida({ onBokaClick }) {
             fontWeight: "500",
             borderRadius: "0",
           }}
-          onClick={onBokaClick}
         >
           Boka bord
         </Button>

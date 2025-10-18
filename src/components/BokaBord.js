@@ -43,7 +43,7 @@ export default function BokaBordModal({ visible, onClose }) {
     >
       <Form layout="vertical" form={form} onFinish={handleFinish}>
 
-        <p>Sidan är under uppbyggnad. Meny och bokningsfunktion kommer inom kort.</p>
+        <p>Sidan är under uppbyggnad. Meny kommer inom kort.</p>
 
         <Form.Item>
           <Button type="primary" htmlType="submit" block className="skicka-bokning-knapp">

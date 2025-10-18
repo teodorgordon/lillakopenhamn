@@ -70,15 +70,16 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
         Meny
       </Menu.Item>
 
-      <Menu.Item
-        key="3"
-        onClick={() => {
-          setIsModalVisible(true);
-          setIsDrawerOpen(false);
-        }}
+      <Menu.Item key="3">
+      <a
+        href="https://app.bokabord.se/reservation/?hash=376d46c6f948c6345441bd2b6368a8ec"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => setIsDrawerOpen(false)}
       >
         Boka bord
-      </Menu.Item>
+      </a>
+    </Menu.Item>
       <Menu.Item key="4">
         <Link to="/Hitta" onClick={() => setIsDrawerOpen(false)}>Hitta hit</Link>
       </Menu.Item>
@@ -139,9 +140,9 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
               <a href="https://www.instagram.com/lillakopenhamn" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "22px" }}><FaInstagram /></a>
               <span style={{ color: "#ccc", marginLeft: 8 }}>Följ oss i sociala medier för erbjudanden och andra nyheter.</span>
             </div>
-            <div style={{ textAlign: "right" }}>
+            {/* <div style={{ textAlign: "right" }}>
               <Link to="/Personuppgifter" style={{ color: "#ccc" }}>Personuppgifter</Link>
-            </div>
+            </div> */}
           </div>
           <div style={{ textAlign: "center", marginTop: "32px", fontSize: "14px", color: "#999" }}>
             © 2025 Lilla Köpenhamn · Org. nr: 556733-7851
