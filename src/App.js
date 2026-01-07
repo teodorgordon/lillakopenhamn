@@ -145,7 +145,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
             </div> */}
           </div>
           <div style={{ textAlign: "center", marginTop: "32px", fontSize: "14px", color: "#999" }}>
-            © 2025 Lilla Köpenhamn · Org. nr: 556733-7851
+              © {new Date().getFullYear()} Lilla Köpenhamn · Org. nr: 556733-7851
           </div>
         </div>
       </Footer>
