@@ -9,7 +9,7 @@ export default function AllaHjartansDag() {
       {/* Rubrik */}
       <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center", marginBottom: "40px" }}>
         <Title level={1} style={{ color: "#d81b3aff", fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700"}}>
-          ❤️ Alla hjärtans dag ❤️
+          Alla hjärtans dag
         </Title>
         <Paragraph style={{ color: "#666", fontSize: "18px", fontStyle: "italic" }}>
           Fira kärleken tillsammans med oss på Hos Per-Jönson
@@ -48,7 +48,7 @@ export default function AllaHjartansDag() {
             >
               <div style={{ maxWidth: "650px", textAlign: "center" }}>
                 <Title level={2} style={{ color: "black", fontSize: "32px" }}>
-                  En dag för kärleken
+                  En dag för kärleken ❤️
                 </Title>
                 <Paragraph style={{ color: "black", fontSize: "18px", lineHeight: "1.6" }}>
                   Gör Alla hjärtans dag oförglömlig tillsammans med din älskade! 

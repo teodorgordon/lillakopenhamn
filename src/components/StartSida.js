@@ -162,13 +162,13 @@ export default function StartSida({ onBokaClick }) {
               border: "2px solid #e91e63",
               color: "#fff",
               fontSize: "18px",
-              padding: "20px 8px",
+              padding: "20px 40px",
               fontWeight: "600",
               borderRadius: "0",
               boxShadow: "0 4px 12px rgba(233, 30, 99, 0.4)",
             }}
           >
-            ❤️ Alla hjärtans dag erbjudande ❤️
+            Alla hjärtans dag erbjudande
           </Button>
         </Link>
 
