@@ -8,7 +8,7 @@ export default function AllaHjartansDag() {
     <div style={{ background: "#fff", minHeight: "100vh", padding: "76px 24px" }}>
       {/* Rubrik */}
       <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center", marginBottom: "40px" }}>
-        <Title level={1} style={{ color: "#d81b3aff", fontSize: "48px", fontWeight: "700" }}>
+        <Title level={1} style={{ color: "#d81b3aff", fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700"}}>
           ❤️ Alla hjärtans dag ❤️
         </Title>
         <Paragraph style={{ color: "#666", fontSize: "18px", fontStyle: "italic" }}>
