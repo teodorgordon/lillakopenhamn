@@ -7,6 +7,7 @@ import StartSida from "./components/StartSida";
 import Meny from "./components/Meny";
 import HittaHit from "./components/HittaHit";
 import OmOss from "./components/OmOss";
+import AllaHjartansDag from "./components/allahjartansdag";
 import Personuppgifter from "./components/Personuppgifter";
 
 const { Header, Content, Footer } = Layout;
@@ -162,6 +163,7 @@ export default function App() {
         <Route path="/Meny" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Meny />} />} />
         <Route path="/Hitta" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<HittaHit />} />} />
         <Route path="/OmOss" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<OmOss />} />} />
+        <Route path="/AllaHjartansDag" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<AllaHjartansDag />} />} />
         <Route path="/Personuppgifter" element={<LayoutWrapper isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} page={<Personuppgifter />} />} />
       </Routes>
     </Router>

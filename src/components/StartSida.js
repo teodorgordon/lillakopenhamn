@@ -107,44 +107,71 @@ export default function StartSida({ onBokaClick }) {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           gap: "20px",
-          flexWrap: "wrap",
-          justifyContent: "center",
+          alignItems: "center",
           zIndex: 3,
         }}
       >
-        <Button
-          as="a"
-          href="https://app.bokabord.se/reservation/?hash=376d46c6f948c6345441bd2b6368a8ec"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
           style={{
-            background: "transparent",
-            border: "2px solid #cbc2b8",
-            color: "#fff",
-            fontSize: "18px",
-            padding: "20px 40px",
-            fontWeight: "500",
-            borderRadius: "0",
+            display: "flex",
+            gap: "20px",
+            flexWrap: "wrap",
+            justifyContent: "center",
           }}
         >
-          Boka bord
-        </Button>
+          <Button
+            as="a"
+            href="https://app.bokabord.se/reservation/?hash=376d46c6f948c6345441bd2b6368a8ec"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: "transparent",
+              border: "2px solid #cbc2b8",
+              color: "#fff",
+              fontSize: "18px",
+              padding: "20px 40px",
+              fontWeight: "500",
+              borderRadius: "0",
+            }}
+          >
+            Boka bord
+          </Button>
 
-        <Button
-          style={{
-            background: "transparent",
-            border: "2px solid #cbc2b8",
-            color: "#fff",
-            fontSize: "18px",
-            padding: "20px 40px",
-            fontWeight: "500",
-            borderRadius: "0",
-          }}
-          onClick={onBokaClick}
-        >
-          Meny
-        </Button>
+          <Button
+            style={{
+              background: "transparent",
+              border: "2px solid #cbc2b8",
+              color: "#fff",
+              fontSize: "18px",
+              padding: "20px 40px",
+              fontWeight: "500",
+              borderRadius: "0",
+            }}
+            onClick={onBokaClick}
+          >
+            Meny
+          </Button>
+        </div>
+
+        <Link to="/AllaHjartansDag">
+          <Button
+            style={{
+              background: "#e91e63",
+              border: "2px solid #e91e63",
+              color: "#fff",
+              fontSize: "18px",
+              padding: "20px 8px",
+              fontWeight: "600",
+              borderRadius: "0",
+              boxShadow: "0 4px 12px rgba(233, 30, 99, 0.4)",
+            }}
+          >
+            ❤️ Alla hjärtans dag erbjudande ❤️
+          </Button>
+        </Link>
+
 
 
 
