@@ -93,7 +93,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
   const SocialIcons = (
     <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
       <a href="https://www.facebook.com/profile.php?id=61576269208161" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "20px" }}><FaFacebookF /></a>
-      <a href="https://www.instagram.com/lillakopenhamn" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "22px" }}><FaInstagram /></a>
+      <a href="https://www.instagram.com/hosperjonson/" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "22px" }}><FaInstagram /></a>
     </div>
   );
 
@@ -138,7 +138,7 @@ function LayoutWrapper({ isModalVisible, setIsModalVisible, page }) {
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", alignItems: "center", gap: "16px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <a href="https://www.facebook.com/profile.php?id=61576269208161" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "20px" }}><FaFacebookF /></a>
-              <a href="https://www.instagram.com/lillakopenhamn" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "22px" }}><FaInstagram /></a>
+              <a href="https://www.instagram.com/hosperjonson/" target="_blank" rel="noopener noreferrer" style={{ color: "#ccc", fontSize: "22px" }}><FaInstagram /></a>
               <span style={{ color: "#ccc", marginLeft: 8 }}>Följ oss i sociala medier för erbjudanden och andra nyheter.</span>
             </div>
             {/* <div style={{ textAlign: "right" }}>
